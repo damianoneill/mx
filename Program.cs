@@ -11,7 +11,15 @@ namespace mx
             {
                 Console.Write("What is your name? ");
                 input = Console.ReadLine();
-                string message = "Hello " + input + "!";
+                string message;
+                if (input == "Damian")
+                {
+                    message = "Hi " + input;
+                }
+                else
+                {
+                    message = "Hello " + input + "!";
+                }
                 Console.WriteLine(message);
             } while (input != "");
         }
