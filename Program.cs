@@ -6,10 +6,14 @@ namespace mx
     {
         static void Main(string[] args)
         {
-            Console.Write("What is your name? ");
-            string input = Console.ReadLine();
-            string message = "Hello " + input + "!";
-            Console.WriteLine(message);
+            string input;
+            do
+            {
+                Console.Write("What is your name? ");
+                input = Console.ReadLine();
+                string message = "Hello " + input + "!";
+                Console.WriteLine(message);
+            } while (input != "");
         }
     }
 }
