@@ -5,8 +5,9 @@ Sample application for demonstration C# code that satisfies the Digital Developm
 Solution uses the .NET SDK to build and run the application.
 
 ```sh
-$ dotnet run
-Hello World!
+$ dotnet run 
+What is your name? Damian
+Hello Damian!
 ```
 
 At each stage where new functionality is introduced a Git Tag has been created, these are ordered numerically.
