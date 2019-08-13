@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 
 namespace mx
 {
@@ -6,22 +7,11 @@ namespace mx
     {
         static void Main(string[] args)
         {
-            string input;
-            do
-            {
-                Console.Write("What is your name? ");
-                input = Console.ReadLine();
-                string message;
-                if (input == "Damian")
-                {
-                    message = "Hi " + input;
-                }
-                else
-                {
-                    message = "Hello " + input + "!";
-                }
-                Console.WriteLine(message);
-            } while (input != "");
+            var client = new WebClient();
+            string url = "https://api.promotocrossapi.com/laptimes/18/WICK-338";
+            var response = client.DownloadString(url);
+
+            Console.WriteLine(response);
         }
     }
 }
