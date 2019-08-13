@@ -11,7 +11,9 @@ namespace mx
             string url = "https://api.promotocrossapi.com/laptimes/18/WICK-338";
             var response = client.DownloadString(url);
 
-            Console.WriteLine(response);
+            var mx = Welcome.FromJson(response);
+
+            Console.WriteLine("There was " + mx.Data.Length + " Races in 2018 at the WICK-338 track");
         }
     }
 }
