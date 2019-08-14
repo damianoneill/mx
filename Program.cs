@@ -40,6 +40,10 @@ namespace mx
                     response = client.DownloadString(url);
                     mx = Welcome.FromJson(response);
                     Console.WriteLine("There was " + mx.Data.Length + " Races in 2018 at the " + track + " track");
+                    for (int i = 0; i < mx.Data.Length; i++)
+                    {
+                        Console.WriteLine("Round " + mx.Data[i].Round + " Race " + i + ": " + mx.Data[i].Class + " Moto " + mx.Data[i].Moto);
+                    }
                 }
             } while (userInput != 0);
         }
