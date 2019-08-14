@@ -5,6 +5,17 @@ namespace mx
 {
     class Program
     {
+        static public bool ValidateOption(int option)
+        {
+            if (option >= 0 && option <= 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         static public int DisplayMenu()
         {
             Console.WriteLine();
@@ -26,6 +37,11 @@ namespace mx
             do
             {
                 userInput = DisplayMenu();
+                if (!ValidateOption(userInput))
+                {
+                    Console.WriteLine("Please input a value between 0 and 2");
+                    continue;
+                }
                 if (userInput == 1)
                 {
                     url = "https://api.promotocrossapi.com/laptimes/18/WICK-338";
