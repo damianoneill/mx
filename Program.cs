@@ -7,6 +7,7 @@ namespace mx
     {
         static public int DisplayMenu()
         {
+            Console.WriteLine();
             Console.WriteLine("Motocross Querier");
             Console.WriteLine();
             Console.WriteLine("1. Show data from WICK-338");
@@ -42,7 +43,12 @@ namespace mx
                     Console.WriteLine("There was " + mx.Data.Length + " Races in 2018 at the " + track + " track");
                     for (int i = 0; i < mx.Data.Length; i++)
                     {
+                        Console.WriteLine("");
                         Console.WriteLine("Round " + mx.Data[i].Round + " Race " + i + ": " + mx.Data[i].Class + " Moto " + mx.Data[i].Moto);
+                        for (int j = 0; j < mx.Data[i].RiderData.Length; j++)
+                        {
+                            Console.WriteLine(mx.Data[i].RiderData[j].Name + " rode a " + mx.Data[i].RiderData[j].Bike);
+                        }
                     }
                 }
             } while (userInput != 0);
