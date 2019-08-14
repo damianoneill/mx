@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Net;
 
 namespace mx
@@ -66,6 +67,17 @@ namespace mx
                             Console.WriteLine(mx.Data[i].RiderData[j].Name + " rode a " + mx.Data[i].RiderData[j].Bike);
                         }
                     }
+
+                    String path = @"datafile.txt";
+                    if (!File.Exists(path)) // Presence Check
+                    {
+                        Console.WriteLine("No such file existed; one was created.");
+                    }
+                    using (StreamWriter sw = File.AppendText(path))
+                    {
+                        sw.WriteLine(mx.Data[0].Track + " selected at " + DateTime.Now);
+                    }
+
                 }
             } while (userInput != 0);
         }
