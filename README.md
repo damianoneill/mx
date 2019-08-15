@@ -4,7 +4,7 @@ Sample application for demonstration C# code that satisfies the Digital Developm
 
 A presentation exists to describe the code, three versions are available;
 
-* [Powerpoint Version](./docs/docs/Digital-Development-Building-A-Solution.pptx)
+* [Powerpoint Version](./docs/Digital-Development-Building-A-Solution.pptx)
 * [Keynote Version](./docs/Digital-Development-Building-A-Solution.key)
 * [PDF Version](./docs/Digital-Development-Building-A-Solution.pdf) - this does not contain the presenter notes.
 
